@@ -1,0 +1,280 @@
+body {
+    margin: 0;
+    background: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.containerParent {
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 220px;
+    background-color: white;
+}
+
+.info {
+    border: 1px solid gray;
+    margin: 15px 5px;
+    width: 200px;
+    height: auto;
+    text-align: center;
+}
+
+.indexName {
+    color: #5f93d1;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 3px;
+}
+
+.indexJobCompany {
+    font-size: .9rem;
+    color: gray;
+    padding: 3px;
+}
+
+.wrapper {
+    margin: 0 220px;
+    background-color: white;
+    padding: 1px;
+}
+
+.prof-detail {
+    width: 775px;
+    text-align: left;
+}
+
+.avatar-prof-img {
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    float: left;
+    margin: 24px;
+    width: 150px;
+}
+
+.prof-name {
+    font-size: 3rem;
+    margin-bottom: 1px;
+    margin-right: 100px;
+    margin-top: 21px;
+}
+
+
+/* NAVIGATION BAR */
+
+nav {
+    margin: 27px auto 0;
+    position: relative;
+    width: 910px;
+    height: 50px;
+    background-color: #34495e;
+    border-radius: 8px;
+    font-size: 0;
+}
+
+nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+}
+
+a:nth-child(1) {
+    width: 100px;
+}
+
+a:nth-child(2) {
+    width: 110px;
+}
+
+a:nth-child(3) {
+    width: 100px;
+}
+
+a:nth-child(4) {
+    width: 160px;
+}
+
+a:nth-child(5) {
+    width: 220px;
+}
+
+a:nth-child(6) {
+    width: 220px;
+}
+
+nav .start-home, a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+    background-color: #1abc9c;
+}
+
+nav .start-login, a:nth-child(2):hover~.animation {
+    width: 110px;
+    left: 100px;
+    background-color: #e74c3c;
+}
+
+nav .start-signup, a:nth-child(3):hover~.animation {
+    width: 100px;
+    left: 210px;
+    background-color: #3498db;
+}
+
+nav .start-profile, a:nth-child(4):hover~.animation {
+    width: 160px;
+    left: 310px;
+    background-color: #9b59b6;
+}
+
+nav .start-employed, a:nth-child(5):hover~.animation {
+    width: 220px;
+    left: 470px;
+    background-color: #e67e22;
+}
+
+nav .start-unemployed, a:nth-child(6):hover~.animation {
+    width: 220px;
+    left: 690px;
+    background-color: gold;
+}
+
+
+/* LOGIN PAGE */
+
+.login-wrapper {
+    background: #2c3e50;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    margin-top: -200px;
+    overflow: hidden;
+}
+
+.login-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 80px 0;
+    height: 400px;
+    text-align: center;
+}
+
+.login-container h1 {
+    font-size: 40px;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-put;
+    font-weight: 200;
+    color: white;
+}
+
+form {
+    padding: 20px 0;
+    position: relative;
+    z-index: 2;
+}
+
+input {
+    display: block;
+    appearance: none;
+    outline: 0;
+    border: 1px solid fade(white, 40%);
+    background-color: fade(white, 20%);
+    width: 250px;
+    border-radius: 3px;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    transition-duration: 0.25s;
+    font-weight: 300;
+}
+
+input:hover {
+    background-color: fade(white, 40%);
+}
+
+input:focus {
+    background-color: #e74c3c;
+    width: 300px;
+    color: white;
+}
+
+button {
+    appearance: none;
+    outline: 0;
+    background-color: #1abc9c;
+    border: 0;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 3px;
+    width: 250px;
+    cursor: pointer;
+    font-size: 18px;
+    transition-duration: 0.25s;
+}
+
+button:hover {
+    background-color: #9b59b6;
+}
+
+
+/* SIGN-UP PAGE */
+
+.signup-container {
+    background: #2c3e50;
+    position: static;
+    width: 60%;
+    height: 600px;
+    /* margin-top: -115px; */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 260px;
+}
+
+.signup-hd {
+    font-size: 40px;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-put;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+}
+
+.su-input {
+    display: inline;
+    width: 300px;
+    margin-left: 37px;
+}
+
+.su-button {
+    margin-left: 267px;
+    margin-top: 50px;
+}

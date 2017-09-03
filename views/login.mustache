@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/auth/login">Login</a>
+        <a href="/auth/signup">Signup</a>
+        <a href="/user/profile">My Profile</a>
+        <a href="/employment/employed">Currently Employed</a>
+        <a href="/employment/unemployed">Available For Hire</a>
+        <div class="animation start-home"></div>
+    </nav>
+
+    <div class="login-wrapper">
+        <div class="login-container">
+            <h1>Welcome</h1>
+
+            <form class="login-form" action="/auth/login" method="POST">
+                {{#errors}}
+                <h4>{{.}}</h4>
+                {{/errors}}
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="password1234" required>
+                <button type="submit" id="login-button">Login</button>
+            </form>
+        </div>
+
+
+</body>
+
+</html>

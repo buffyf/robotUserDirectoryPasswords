@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up - Robot Directory</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/auth/login">Login</a>
+        <a href="/auth/signup">Signup</a>
+        <a href="/user/profile">My Profile</a>
+        <a href="/employment/employed">Currently Employed</a>
+        <a href="/employment/unemployed">Available For Hire</a>
+        <div class="animation start-home"></div>
+    </nav>
+    <div class="wrapper-signup">
+        <div class="form">
+            <div class="signup-container">
+                <form class=" login-form " action="/auth/signup " method="POST ">
+                    <h1 class="signup-hd">Robot Directory Sign-up</h1>
+                    <input class="su-input" type="text " name="name " placeholder="Name " autocomplete="off " required>
+                    <input class="su-input" type="email " name="email " placeholder="Email@email.com " autocomplete="off " required>
+                    <input class="su-input" type="text " name="username " placeholder="Username " autocomplete="off " required>
+                    <input class="su-input" type="password " name="password " placeholder="Password " autocomplete="off " required>
+                    <input class="su-input" type="text " name="address.city " placeholder="City " autocomplete="off ">
+                    <input class="su-input" type="text " name="address.country " placeholder="Country ">
+                    <input class="su-input" type="text " name="phone " placeholder="x-(xxx)xxx-xxxx " autocomplete="off " required>
+                    <input class="su-input" type="text " name="university " placeholder="University " autocomplete="off ">
+                    <input class="su-input" type="text " name="job " placeholder="Job - Leave Blank if None " autocomplete="off ">
+                    <input class="su-input" type="text " name="company " placeholder="Company - Leave Blank if None " autocomplete="off ">
+
+                    <input class="su-input" type="text " name="skills " placeholder="Skill 1 ">
+                    <input class="su-input" type="text " name="skills " placeholder="Skill 2 ">
+                    <button class="su-button" type="Submit ">Sign Up!</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

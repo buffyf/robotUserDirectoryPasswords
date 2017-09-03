@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Directory</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/auth/login">Login</a>
+        <a href="/auth/signup">Signup</a>
+        <a href="/user/profile">My Profile</a>
+        <a href="/employment/employed">Currently Employed</a>
+        <a href="/employment/unemployed">Available For Hire</a>
+        <div class="animation start-home"></div>
+    </nav>
+
+
+
+    <h1 class="index-hd">Robot User Directory</h1>
+    <br>
+    <div class="containerParent">
+        <div class="container">
+            {{#users}}
+            <div class="info">
+                {{#avatar}}
+                <img class="avatar" src="{{avatar}}">{{/avatar}} {{^avatar}} <img class="avatar" src="/img/rosie.png">{{/avatar}}
+
+                <p><a href="/profile/{{_id}}">{{name}}</a></p>
+                {{#job}}
+                <p class="jobInfo">{{job}}, {{company}}</p>{{/job}} {{^job}}
+                <p style="color: #c87a74">Available for hire</p>{{/job}}
+            </div>
+            {{/users}}
+        </div>
+    </div>
+
+</body>
+
+</html>
