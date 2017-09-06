@@ -18,49 +18,12 @@
         <a href="/update">Update Profile</a>
         <div class="animation start-home"></div>
     </nav>
-
-
-    <div class="wrapper">
-
-
-        {{#users}}
-
-        <div class="tab">
-            <h1>This is the update page!</h1>
-            <div>
-                <form action="/user/updateprofile/{{_id}}" method="POST">
-
-                    <label>Name</label>
-                    <input type="text" name="name" value={{name}} autocomplete="off">
-                    <label></label><input type="email" name="email" value={{email}} autocomplete="off" required>
-                    <label></label><input type="text" name="username" value={{username}} autocomplete="off" required>
-                    <input type="text" name="address.city" placeholder="City" value={{address.city}} autocomplete="off">
-                    <input type="text" name="address.country" placeholder="Country" value={{address.country}}>
-                    <input type="text" name="phone" value={{phone}} autocomplete="off" required>
-                    <input type="text" name="university" autocomplete="off">
-                    <input type="text" name="job" placeholder="Job - Leave Blank if None" autocomplete="off">
-                    <input type="text" name="company" placeholder="Company - Leave Blank if None" autocomplete="off">
-                    <input type="text" name="skills" placeholder="Skill 1">
-                    <input type="text" name="skills" placeholder="Skill 2">
-                    <input type="text" name="skills" placeholder="Skill 3">
-
-                    <button type="Submit">Update Profile</button>
-                </form>
-
-                <form action="/user/deleteUser/{{_id}}" method="GET">
-                    <button type="Submit">Delete Profile</button>
-                </form>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="prof-parent">
-
-        <div class="prof-ctr">
+    <div class="upd-wrapper">
+        <div class="prof-detail">
+            {{#users}}
             <div>
                 {{#avatar}}
-                <img class="avatar prof-img" src="{{avatar}}">{{/avatar}} {{^avatar}} <img class="avatar prof-img" src="/img/noPhoto.png">{{/avatar}}
+                <img class="avatar-prof-img" src="{{avatar}}">{{/avatar}} {{^avatar}} <img class="avatar prof-img" src="/img/rosie.png">{{/avatar}}
             </div>
             <div class="text-content">
                 <p class="prof-name">{{name}}</p>
@@ -75,14 +38,44 @@
                 {{#university}}
                 <p><strong>Education:</strong> {{university}}</p>
                 {{/university}}{{^university}} {{/university}}
-
-
                 <p><strong>Skills:</strong> {{#skills}}{{.}},&nbsp;{{/skills}}</p>
             </div>
-            {{/users}}
         </div>
     </div>
 
+    <div class="signup-wrapper">
+
+
+
+        <div class="form">
+            <div class="update-container">
+                <form class="update-form" action="/user/updateprofile/{{_id}}" method="POST">
+                    <input class="su-input" type="text" name="name" value="{{name}}" autocomplete="off">
+                    <input class="su-input" type="email" name="email" value="{{email}}" autocomplete="off" required>
+                    <input class="su-input" type="text" name="username" value="{{username}}" autocomplete="off" required>
+                    <input class="su-input" type="text" name="address.city" placeholder="City" value="{{address.city}}" autocomplete="off">
+                    <input class="su-input" type="text" name="address.country" placeholder="Country" value="{{address.country}}">
+                    <input class="su-input" type="text" name="phone" value="{{phone}}" autocomplete="off" required>
+                    <input class="su-input" type="text" name="university" value="{{university}}" autocomplete="off">
+                    <input class="su-input" type="text" name="job" value="{{job}}" placeholder="Job - Leave Blank if None" autocomplete="off">
+                    <input class="su-input" type="text" name="company" value="{{company}}" placeholder="Company - Leave Blank if None" autocomplete="off">
+                    <input class="su-input" type="text" name="skills" placeholder="Skill 1">
+                    <input class="su-input" type="text" name="skills" placeholder="Skill 2">
+                    <input class="su-input" type="text" name="skills" placeholder="Skill 3">
+
+                    <button class="su-button" type="Submit">Update Profile</button>
+
+
+                    <button action="/user/deleteUser/{{_id}}" method="GET" class="del-button" type="Submit">Delete Profile</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    {{/users}}
 
 
 </body>

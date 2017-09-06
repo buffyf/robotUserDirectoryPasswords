@@ -4,10 +4,24 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/* INDEX PAGE */
+
+.index-hd {
+    font-size: 40px;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+    background-color: #34495e;
+    padding: 10px 0 30px 0;
+    margin-bottom: -20px;
+}
+
 .containerParent {
     max-width: 100vw;
     display: flex;
     justify-content: center;
+    background-color: #34495e;
 }
 
 .container {
@@ -15,7 +29,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 220px;
-    background-color: white;
+    background-color: #34495e;
 }
 
 .info {
@@ -24,6 +38,7 @@ body {
     width: 200px;
     height: auto;
     text-align: center;
+    background-color: white;
 }
 
 .indexName {
@@ -33,14 +48,17 @@ body {
     padding: 3px;
 }
 
-.indexJobCompany {
+.jobInfo {
     font-size: .9rem;
     color: gray;
     padding: 3px;
 }
 
+
+/* PROFILE PAGE */
+
 .wrapper {
-    margin: 0 220px;
+    margin: 100px 220px;
     background-color: white;
     padding: 1px;
 }
@@ -48,6 +66,7 @@ body {
 .prof-detail {
     width: 775px;
     text-align: left;
+    margin-bottom: 50px;
 }
 
 .avatar-prof-img {
@@ -63,6 +82,7 @@ body {
     margin-bottom: 1px;
     margin-right: 100px;
     margin-top: 21px;
+    color: #e67e22;
 }
 
 
@@ -251,7 +271,6 @@ button:hover {
     position: static;
     width: 60%;
     height: 600px;
-    /* margin-top: -115px; */
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -259,7 +278,7 @@ button:hover {
     margin: 20px 260px;
 }
 
-.signup-hd {
+.signup-container h1 {
     font-size: 40px;
     transition-duration: 1s;
     transition-timing-function: ease-in-put;
@@ -276,5 +295,38 @@ button:hover {
 
 .su-button {
     margin-left: 267px;
-    margin-top: 50px;
+    margin-top: 20px;
+}
+
+
+/* UPDATE PAGE */
+
+.upd-wrapper {
+    margin: 30px 220px;
+    background-color: white;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+
+.update-container {
+    background: #2c3e50;
+    position: static;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.update-form {
+    padding: 20px 0 0 75px;
+    position: relative;
+    z-index: 2;
+    margin-top: 70px;
+}
+
+.del-button {
+    margin-left: 133px;
+    margin-top: 20px;
 }
